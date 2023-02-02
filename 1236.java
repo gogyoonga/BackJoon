@@ -21,14 +21,12 @@ public class Main {
         for (int i=0; i<n; i++){
             // 행
             boolean status = false; //경비 없음 디폴트
-arr[i] = bf.readLine();
+            arr[i] = bf.readLine();
             for(int j=0; j<m; j++){
                 // 열
                 if (arr[i].charAt(j) == 'X'){
                     status = true; //경비 있으면 상태변경
-                }
-                if (status){
-                    break; // 경비 있으면 다음 행으로 넘어감
+                    break;
                 }
                 if(j==m-1){
                     //열 끝까지 경비가 없을시 경비 한명 배치해야 함.
@@ -56,7 +54,7 @@ arr[i] = bf.readLine();
                 if (status){
                     break; // 경비 있으면 다음 행으로 넘어감
                 }
-                if(j==m-1){
+                if(j==n-1){
                     //열 끝까지 경비가 없을시 경비 한명 배치해야 함.
                     y++;
             }
@@ -65,10 +63,3 @@ arr[i] = bf.readLine();
 
     }
 }
-
-//5 8
-//        ....XX..
-//        ........
-//        .X.X..X.
-//        ........
-//        ........
